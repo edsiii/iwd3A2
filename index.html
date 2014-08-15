@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>Live Tiles</title>
+	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Included Bootstrap CSS Files -->
+	<link rel="stylesheet" href="./js/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./js/bootstrap/css/bootstrap-responsive.min.css" />
+	
+    <link href="./Scripts/MetroJs/bundles/MetroJs.min.css" rel="stylesheet" type="text/css" />
+	
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
+	
+	<!-- Css -->
+	<link rel="stylesheet" href="./css/style.css" />
+	
+	
+	<style>
+		.section-wrapper {
+			margin-top: -50px;
+			padding-top: 50px;
+		}
+
+		.section-wrapper:first-child .section {
+			padding-top: 100px;
+		}
+
+		#nav {
+			background: #000;
+			left: 0;
+			list-style: none;
+			overflow: hidden;
+			padding-top: 9px;
+			position: fixed;
+			right: 0;
+			text-align: center;
+			top: 0;
+		}
+		#nav li {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+		#nav a {
+			background: #000;
+			color: #fff;
+			display: block;
+			padding: 10px;
+		}
+		#nav a:hover {
+			background: none;
+			color: #dedede;
+		}
+		#nav .current a {
+			background: #fff;
+			color: #000;
+		}
+		#man {
+			margin: 0 auto;
+		}
+	}
+
+	</style>
+</head>
+<body>
+<div id="man" style="margin: auto;
+margin-left:auto;
+margin-right:auto;
+align:center;
+width: 100%;
+text-align:center;">
+	<div class="tiles" id="x32" style="">
+	<!--
+		<div class="live-tile">
+			<div style="background-color:Red;">test 1<br>Hello world!</div>
+			<div style="background-color:Orange;">test back<img class="full" src="./images/4.jpg" alt="3" /></div>
+		</div>
+		-->
+		<!-- Green Static Tile -->
+    <div class="live-tile accent green exclude">
+        <span class="tile-title">static tile</span>
+        <p>Static tiles can take advantage of theming too!</p>
+    </div>
+		<div class="live-tile" data-mode="flip">
+			<div style="background-color:green;">test 2<img class="full" src="./images/7.jpg" alt="3" /></div>
+			<div> </div>
+		</div>
+		<div class="list-tile">
+			<ul class="flip-list fourTiles" data-mode="flip-list">
+				<li><div><img class="full" src="./images/6.jpg" alt="3" /></div><div><img class="full" src="./images/3.jpg" alt="3" /></div></li>
+				<li><div style="background-color:Orange;"></div><div><img class="full" src="./images/5.jpg" alt="3" /></div></li>
+				<li><div style="background-color:Green;"></div><div><img class="full" src="./images/10.jpg" alt="3" /></div></li>
+				<li><div style="background-color:Red;"><img class="full" src="./images/2.jpg" alt="3" /></div><div><img class="full" src="./images/9.jpg" alt="3" /></div></li>
+				<!--
+				<li><div style="background-color:Red;"><img class="full" src="./images/2.jpg" alt="3" /></div><div><img class="full" src="./images/9.jpg" alt="3" /></div></li>
+				-->
+			</ul>
+		</div>
+	</div>
+    <!-- Carousel Tile that slides 4 tile faces every 2.5 seconds -->
+    <div class="live-tile" data-mode="carousel" data-direction="horizontal" data-delay="2500">
+        <div>
+            <img class="full" src="./images/2.jpg" alt="1" />
+            <span class="tile-title">carousel slide 1</span>
+        </div>
+        <div>
+            <img class="full" src="./images/6.jpg" alt="2" />
+            <span class="tile-title accent">carousel slide 2</span>
+        </div>
+		<!--
+        <div>
+            <img class="full" src="./images/8.jpg" alt="3" />
+            <span class="tile-title">carousel slide 3</span>
+        </div>
+		-->
+		<div></div>
+        <div>
+            <img class="full" src="./images/10.jpg" alt="4" />
+            <span class="tile-title accent">carousel slide 4</span>
+        </div>
+    </div>
+	
+	<!-- Sliding Tile that shows 100% of the back tile every 3 seconds -->
+    <div class="live-tile" data-speed="750" data-delay="3000">
+        <span class="tile-title">slide tile</span>
+        <div><img class="full" src="./images/4.jpg" alt="1" /></div>
+        <div></div>
+    </div>
+	
+	<!-- Green Static Tile -->
+    <div class="live-tile accent green exclude">
+        <span class="tile-title">static tile</span>
+        <p>Static tiles can take advantage of theming too!</p>
+    </div>
+	
+	<!-- Sliding Tile that shows 100% of the back tile every 3 seconds -->
+    <div class="live-tile" data-speed="750" data-delay="3000">
+        <span class="tile-title">slide tile</span>
+        <div><img class="full" src="./images/15.jpg" alt="1" /></div>
+        <div></div>
+    </div>
+
+	<div class="list-tile">
+		<ul class="flip-list fourTiles" data-mode="flip-list">
+			<li><div style="background-color:Blue;"><img class="full" src="./images/6.jpg" alt="3" /></div><div><img class="full" src="./images/3.jpg" alt="3" /></div></li>
+			<li><div style="background-color:Orange;"></div><div><img class="full" src="./images/5.jpg" alt="3" /></div></li>
+			<li><div style="background-color:Green;"></div><div><img class="full" src="./images/10.jpg" alt="3" /></div></li>
+			<li><div style="background-color:Red;"><img class="full" src="./images/2.jpg" alt="3" /></div><div><img class="full" src="./images/9.jpg" alt="3" /></div></li>
+			
+		</ul>
+	</div>
+		
+		
+</div>
+	
+    <script src="./Scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="./Scripts/MetroJs/bundles/MetroJs.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".live-tile,.flip-list").liveTile();
+			/*
+			$(".live-tile").liveTile({
+				swap:'html,image',
+				frontContent: ['some html content', '<p>i dont want random></p>'],
+				frontIsRandom: false,
+				frontImages: [
+					{src: '../images/1.jpg', alt:'some images'},
+					// note: you can also pass attr and css values directly for images
+					{ attr: { src:'../images/8.jpg', alt:'i want random' } }
+				],
+				imgSwap: { frontIsRandom: true }
+			});
+			*/
+        });
+    </script>
+</body>
+</html>
